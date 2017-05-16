@@ -22,10 +22,10 @@ def main():
       data = response.read() # a `bytes` object
       out_file.write(data)
 
-  #if not os.path.exists(IRIS_TEST):
-  #  with urllib.request.urlopen(IRIS_TEST_URL) as response, open(IRIS_TEST, 'wb') as out_file2:
-  #    data = response.read() # a `bytes` object
-  #    out_file2.write(data)  
+  if not os.path.exists(IRIS_TEST):
+    with urllib.request.urlopen(IRIS_TEST_URL) as response, open(IRIS_TEST, 'wb') as out_file2:
+      data = response.read() # a `bytes` object
+      out_file2.write(data)  
 
   # Load datasets.
   training_set = tf.contrib.learn.datasets.base.load_csv_with_header(
