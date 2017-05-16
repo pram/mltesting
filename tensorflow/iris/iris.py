@@ -74,7 +74,7 @@ def main():
       [[6.4, 3.2, 4.5, 1.5],
        [5.8, 3.1, 5.0, 1.7]], dtype=np.float32)
 
-  predictions = list(classifier.predict(input_fn=new_samples))
+  predictions = list(classifier.predict_classes(input_fn=new_samples))
 
   print(
       "New Samples, Class Predictions:    {}\n"
